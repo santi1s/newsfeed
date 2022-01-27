@@ -1,0 +1,11 @@
+## Parameterized variable - assumed to be populated by CI plat
+environment                         = "${ENV}"
+location                            = "${LOCATION}"
+application_name                    = "${APP}"
+# Sensitive
+newsfeed_token                      = "${NEWSFEED_TOKEN}"
+#Static ( for now)
+vnet_address_space                  = ["10.206.0.0/22"]
+static_account_tier                 = "Standard"
+static_account_replication_type     = "LRS"
+keyvault_sku                        = "standard"

@@ -18,3 +18,5 @@ az login --service-principal -u ${ARM_CLIENT_ID} -p ${ARM_CLIENT_SECRET} --tenan
 
 az aks get-credentials -n ${AKS_NAME} -g ${RG_NAME} --admin --file $HOME/.kube/config.${APP}.${ENV}.${LOCATION} --overwrite-existing
 
+log_info "kubeconfig: $HOME/.kube/config.${APP}.${ENV}.${LOCATION}"
+log_info "export KUBECONFIG=$HOME/.kube/config.${APP}.${ENV}.${LOCATION} to execute kubectl commands against the cluster"

@@ -1,0 +1,12 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: azure-kv-mvpapp-user
+  namespace: mvpapp
+spec:
+  parameters:
+    userAssignedIdentityID: "8f402622-00ed-4745-8cd4-77117271c1c5"  # Set the clientID of the user-assigned managed identity to use
+    keyvaultName: "kv-mvpapp-test-westeurop"     # Set to the name of your key vault
+    tenantId: "f5df8def-d24b-4407-92a0-1df3d3751cdb"                # The tenant ID of the key vault
+
+    

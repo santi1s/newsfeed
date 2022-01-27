@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../base
+
+images:
+- name: acrmvpapptestwesteurope.azurecr.io/front-end
+  newTag: e259075
+
+patchesStrategicMerge:
+- test-env.yaml
+- test-spc.yaml
+

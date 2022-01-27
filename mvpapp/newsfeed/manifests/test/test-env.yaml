@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newsfeed
+  namespace: mvpapp
+spec:
+  template:
+    spec:
+      containers:
+      - name: newsfeed
+        env:
+        - name: APP_PORT
+          value: "8002"
